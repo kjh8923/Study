@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>script엘리먼트 사용</title>
+<script>
+//자바스크립트 코드를 수용
+function over(obj){ //자바스크립트 함수는 function 함수이름(파라메터){ }
+	obj.src="media/banana.png";
+}
+
+function out(obj){
+	obj.src="media/apple.png";
+}
+</script>
+</head>
+<body>
+
+<h3>마우스 올려 보세요</h3>
+<hr/>
+<img src="media/apple.png" alt="이미지"
+		onmouseover="over(this)"
+		onmouseout="out(this)">
+		<!-- over(this)와 out(this)는 자바스크립트 코드로 함수 호출 코드임 -->
+</body>
+</html>

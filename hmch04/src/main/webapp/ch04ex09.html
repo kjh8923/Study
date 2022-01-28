@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>selector</title>
+<style>
+h3, li{	/* 태그이름 셀렉터, 복수개의 셀렉터값 사용시는 ,로 구분 */
+	color : brown;
+}
+
+body.main{	/* 태그는 body이고 class는 main을 선택 */
+	background-color:aliceblue;
+}
+
+.warning{	/* 클래스로만 선택 */
+	color:red;
+}
+
+#list{	/* 속석명이 id인것을 선택하는 셀렉터로 css에서는 #으로 사용 */
+	background:mistyrose;
+}
+
+div> div> strong{ /* div의 자식인 div의 자식 strong을 선택 */
+	background : yellow;
+}
+
+ul strong{	/* 후손관계 */
+	
+}
+
+h3:first-letter{	/* 가상 클래스로 h3의 첫글자를 선택 */
+	color : red;
+}
+
+li:hover{	/* li태그에 마우스를 얹었을 때 */
+	background : yellowgreen;
+	color : blue; 
+}
+</style>
+</head>
+<body class="main">	<!-- class 속성은 분류를 위한 속성명 -->
+
+<h3>Web Programming</h3>
+<hr/>
+<div>
+	<div>2학기<strong>학습내용</strong></div>
+	<ul id="list">	<!-- id속성명은 유일하게 지정하기 위한 속명성0 -->
+		<li><span>HTML5</span></li>
+		<li><strong>CSS</strong></li>
+		<li>JAVASCRIPT</li>
+	</ul>
+	<div class="warning">60점 이하는 F!</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>text shadow</title>
+<style>
+div{
+	font:normal 24px verdate; /* font 단축형 프로퍼티 style, size, family */
+}
+
+.dropText{
+	text-shadow:3px 3px;
+}
+
+.redText{
+	text-shadow:3px 3px red; /* 그림자색 추가 */
+}
+
+.blurText{
+	text-shadow:3px 3px 5px skyBlue; /* blur효과 5px */
+}
+
+.glowEffect{
+	text-shadow:0px 0px 3px red;
+}
+
+.WordArtEffect{
+	color:white;
+	text-shadow:0px 0px 3px darkblue;
+}
+
+.threeDEffect{
+	color:white;
+	text-shadow:2px 2px 4px black;
+}
+
+.multiEffect{ /* 3개효과 동시 적용 */
+	color:yellow;
+	text-shadow:2px 2px 2px black, 0 0 23px blue, 0 0 5px darkblue; /* 그림자 3개를 만들어서 사용 */
+}
+
+</style>
+</head>
+<body>
+
+<h3>텍스트 그림자 만들기</h3>
+<hr/>
+<div class="dropText">Drop Shadow</div>
+<div class="redText">Color Shadow</div>
+<div class="blurText">Blur Shadow</div>
+<div class="glowEffect">Glow Effect</div>
+<div class="WordArtEffect">WordArtEffect</div>
+<div class="threeDEffect">3D Effect</div>
+<div class="multiEffect">Multiple Shadow</div>
+</body>
+</html>

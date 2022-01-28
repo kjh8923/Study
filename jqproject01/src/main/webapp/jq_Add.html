@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CDN-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> --!>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<title>내용 추가</title>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<ol>
+	<li>List item1</li>
+	<li>List item2</li>
+	<li>List item3</li>
+</ol>
+
+<img src="media/w3jquery.gif" alt="jQuery" width="100" height="140">
+<br/><br/>
+
+<button id="btn1">Append text</button>
+<button id="btn2">Append list items</button>
+<button id="btn3">prepend text</button>
+<button id="btn4">Prepend list items</button>
+<button id="btn5" onclick="appendText()">Append Element</button>
+<br/>
+<button id="btn6">Insert before</button>
+<button id="btn7">Insert after</button>
+<button id="btn8" onclick="appendElement()">Insert after</button>
+
+
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		$("p").append("<b>Appended text</b>.");
+		// p 엘리먼트 내용의 마지막에 붙이기
+	});
+	
+	$("#btn2").click(function(){
+		$("ol").append("<li>Appended item</li>");
+		// ol 엘리먼트의 마지막에 붙이기
+	});
+	
+	$("#btn3").click(function(){
+		$("p").prepend("<b>Appended text</b>.");
+		// p 엘리먼트 내용의 처음에 붙이기
+	});
+	
+	$("#btn4").click(function(){
+		$("ol").prepend("<li>Appended item</li>");
+		// ol 엘리먼트의 처음에 붙이기
+	});
+	
+	$("#btn6").click(function(){
+		$("img").before("<b>Before</b>");
+		//종료 태그가 없는 엘리먼트에 사용
+	});
+	
+	$("#btn7").click(function(){
+		$("img").after("<b>After</b>");
+	});
+});
+
+function appendText(){
+	let txt1 = "<p>Text.</p>"; //순수 HTML 태그 엘리먼트 작성으로 dom객체 변수 값 설정
+	let txt2 = $("<p></p>").text("Text."); //jquery를 이용하여 dom객체변수 설정
+	//selector로 HTML태그엘리먼트를 사용
+	let txt3 = document.createElement("p"); //js로 객체 설정
+	txt3.innerHTML = "Text.";
+	$("body").append(txt1, txt2, txt3);
+}
+
+function appendElement(){
+	let txt1 = "<b>I </b>";
+	let txt2 = $("<i></i>").text("love ");
+	let txt3 = document.createElement("b");
+	txt3.innerHTML = "jQuery!";
+	$("img").after(txt1, txt2, txt3);
+}
+</script>
+</body>
+</html>

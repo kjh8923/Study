@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>number 와 range사용</title>
+</head>
+<body>
+
+<h3>홈 제어 시스템 - 온도 조절</h3>
+<hr/>
+<form>
+	지속시간(0.0~10.0시간) :
+	<input type="number" min="0" max="10" step="0.5"/><br/><br/>
+	<!-- number타입은 숫자만 입력시 사용하며 min과 max를 사용하여 범위를 설정하고 간격은 step으로 -->
+	온도 설정 : 10&deg;
+	<input type="range" min="10" max="30" list="temperatures">30&deg;
+	<!-- range는 슬라이드바형태의 입력창 제공 -->
+	<datalist id="temperatures">
+		<option value="12" label="Low"></option>
+		<option value="20" label="Medium"></option>
+		<option value="28" label="High"></option>
+	</datalist>
+</form>
+</body>
+</html>

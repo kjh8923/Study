@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>let 키워드 사용</title>
+</head>
+<body>
+
+<h3>let 키워드를 사용한 변수 선언</h3>
+<hr/>
+<p id="demo"></p>
+
+<script>
+let x = 10; //전역변수 x 선언
+//x는 10
+
+{
+	let x = 2; //블록안에 로컬변수 x 선언
+	//x는 2
+}
+
+//이 영역은 { } 밖이므로 전역변수 영역
+document.getElementById("demo").innerHTML = x; //x는 10
+</script>
+</body>
+</html>

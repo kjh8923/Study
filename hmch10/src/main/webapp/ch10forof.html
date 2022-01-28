@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>For/of 문</title>
+</head>
+<body>
+
+<h3>for/of문 사용법</h3>
+<hr/>
+
+<p id="demo"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Mini"]; //배열, 객체형 변수시는 const사용 권장
+let text = "";
+for(let x of cars){ //x는 원소를 나타내는 변수
+	text += x + "<br/>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>

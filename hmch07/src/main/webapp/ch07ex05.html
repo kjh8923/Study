@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+</head>
+<body>
+
+<h3>Date 객체로 현재 시간 알아내기</h3>
+<hr/>
+<script>
+var now = new Date(); //현재 시간 값을 가진 Date 객체 생성
+document.write("현재 시간 : " + now.toUTCString() + "<br/><hr/>"); //세계표준시
+document.write(now.getFullYear() + "년도<br/>"); //4자리 연도
+document.write(now.getMonth() + 1 + "월<br/>"); //월은 0~11로 나옴
+document.write(now.getDate() + "일<br/>");
+document.write(now.getHours() + "시<br/>"); //24 형식으로 표시 
+document.write(now.getMinutes() + "분<br/>");
+document.write(now.getSeconds() + "초<br/>");
+document.write(now.getMilliseconds() + "밀리초<br/><hr/>");
+
+var next = new Date(2022, 0, 20, 11, 34, 25);
+document.write("next.toLocaleString() : " + next.toLocaleString() + "<br/>");
+//지역 시간을 나타내는 문자열로 표시
+</script>
+</body>
+</html>

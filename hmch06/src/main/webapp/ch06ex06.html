@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>변수</title>
+</head>
+<body>
+
+<h3>지역변수와 전역변수</h3>
+<hr/>
+<script>
+var x = 100; //전역변수 x
+
+function f(){ //함수 f() 선언
+	var x = 1; //지역변수 x
+	
+	document.write("지역변수 x=" + x); //x로만 사용하면 지역변수 x
+	document.write("<br/>");
+	document.write("전역변수 x=" + this.x);
+	//지역변수 x로 가려진 전역변수 x는 키워드 this를 이용하여 사용
+}
+
+f(); //함수 f() 호출
+</script>
+</body>
+</html>

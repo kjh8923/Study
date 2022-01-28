@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>const 키워드 사용</title>
+</head>
+<body>
+
+<h3>JS const</h3>
+<hr/>
+<p id="demo"></p>
+<script>
+// const로 만든 변수는 재할당 불가능
+// 그러나 배열에서는 원소의 값을 변경하거나 추가 하는 것은 가능
+
+//배열 생성
+const cars = ["Saab", "Volvo", "BMW"];
+//cars = ["Kia", "Hyundai", "Ssanyoung"]; 에러, 재할당은 불가능
+
+//원소를 변경하는 것은 가능
+cars[0] = "Toyota"; // Saab -> Toyota
+
+//원소 추가도 가능
+cars.push("Audi"); //.push는 마지막에 원소 추가
+
+document.getElementById("demo").innerHTML = cars;
+</script>
+</body>
+</html>

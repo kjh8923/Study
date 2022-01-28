@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>const 객체 변수</title>
+</head>
+<body>
+
+<h3>const 객체형 변수</h3>
+<hr/>
+<p id="demo"></p>
+<script>
+const car = {type:"Fiat", model:"500", color:"white"};
+//car = {type:"Volvo", model:"EX60", color:"red"}; 에러, 재할당 불가
+
+//속성을 이용해서 변경
+car.color = "red"; //속성 변경
+car.owner = "Johnson"; //속성추가
+
+document.getElementById("demo").innerHTML = "Car owner is " + car.owner;
+</script>
+</body>
+</html>

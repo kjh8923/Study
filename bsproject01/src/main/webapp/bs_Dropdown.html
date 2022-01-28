@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CDN-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> --!>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<title>Drop Down</title>
+</head>
+<body>
+
+<div class='container'>
+	<h3>dropdown메뉴 만들기</h3>
+	<div class="dropdown dropright"> <!-- dropdown 컨테이너 -->
+	<!-- dropright는 드롭다운메뉴 항목을 오른쪽에 나타나게 함 -->
+		<!-- 드랍다운용 버튼 -->
+		<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+			Dropdown button
+		</button>
+		<!-- 드롭다운 메뉴 -->
+		<div class="dropdown-menu">
+			<!-- 드랍다운 메뉴 항목 -->
+			<!-- dropdown-header는 정보 표시 -->
+			<!-- active 활성화, disabled 비활성화 -->
+			<h5 class="dropdown-header">Dropdown header</h5>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item active" href="#">Link 1</a>
+			<a class="dropdown-item disabled" href="#">Link 2</a>
+			<div class="dropdown-divider"></div>
+			<h5 class="dropdown-header">Dropdown header2</h5>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">Link 3</a>
+			<a class="dropdown-item" href="#">Another Link</a>
+		</div>
+	</div>
+</div>
+<br/>
+<div class='container'>
+	<h3>dropdown메뉴 만들기</h3>
+	<div class="dropdown dropleft float-right"> <!-- dropdown 컨테이너 -->
+	<!-- dropright는 드롭다운메뉴 항목을 오른쪽에 나타나게 함 -->
+		<!-- 드랍다운용 버튼 -->
+		<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+			Dropdown button
+		</button>
+		<!-- 드롭다운 메뉴 -->
+		<div class="dropdown-menu">
+			<!-- 드랍다운 메뉴 항목 -->
+			<!-- dropdown-header는 정보 표시 -->
+			<!-- active 활성화, disabled 비활성화 -->
+			<h5 class="dropdown-header">Dropdown header</h5>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item active" href="#">Link 1</a>
+			<a class="dropdown-item disabled" href="#">Link 2</a>
+			<div class="dropdown-divider"></div>
+			<h5 class="dropdown-header">Dropdown header2</h5>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">Link 3</a>
+			<a class="dropdown-item" href="#">Another Link</a>
+			<span class="dropdown-item-text">Just Text</span> <!-- 순수 문자표시 -->
+		</div>
+	</div>
+</div>
+</body>
+</html>

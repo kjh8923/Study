@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>for 반복문</title>
+</head>
+<body>
+
+<h3>for문으로 10px~35px 크기 출력</h3>
+<hr/>
+<script>
+for(var size=10; size<=35; size+=5){ //5씩 증가
+	document.write("<span");
+	document.write("style='font-size : " + size + "px'>");
+	/* <span style="font-size : 5px" */
+	document.write(size + "px");
+	document.write("</span>");
+	
+	/* <span style="font-sizepx">sizepx</span> */
+}
+</script>
+</body>
+</html>

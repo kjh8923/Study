@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>if문</title>
+</head>
+<body>
+
+<h3>if-else를 이용한 학점 매기기</h3>
+<hr/>
+<div id="result"></div>
+<script>
+	var grade;
+	var score=prompt("점수를 입력하세요", 100); /* 반환값은 문자열로 반환 */
+	score=parseInt(score); /* 문자열 score 값을 정수로 변환 */
+	if(score>=90){
+		grade="A"; /* 한줄이면 { }생략 가능 */
+	}else if(score>=80){
+		grade="B";
+	}else if(score>=70){
+		grade="C";
+	}else if(score>=60){
+		grade="D";
+	}else{
+		grade="F";
+	}
+	/* document.write(score+"는 "+grade+"입니다.<br/>"); */
+	var result = document.getElementById("result");
+	result.innerHTML = "학점은 "+ grade + "입니다.";
+</script>
+</body>
+</html>

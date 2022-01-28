@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>DOM 구성 요소들</title>
+</head>
+<body>
+
+<h3>DOM 객체 p의 프로퍼티, 스타일, 이벤트 리스너</h3>
+<hr/>
+<p id="firstp" style="color:blue; background:yellow" onclick="this.style.color='teal'">
+	이것은<span style="color:red">문장입니다.</span>
+</p>
+<script>
+let p = document.getElementById("firstp"); //p태그 엘리먼트를 js dom객체화
+let text = "p.id = " + p.id + "\n"; //객체 p의 id 속성은 p.id로 사용
+text += "p.tagName = " + p.tagName + "\n"; //dom의 tagName 속성을 사용
+text += "p.innerHTML = " + p.innerHTML + "\n"; //dom의 innerHTML 속성
+text += "p.style.color = " + p.style.color + "\n"; //dom의 style속성으로 css 속성값
+text += "p.onclick = " + p.onclick + "\n"; //onclick 속성값 함수로 표시
+text += "p.childElementCount = " + p.childElementCount + "\n"; //dom p의 자식 엘리먼트 수
+text += "너비 = " + p.offsetWidth + "\n";
+text += "높이 = " + p.offsetHeight + "\n";
+alert(text);
+</script>	
+</body>
+</html>

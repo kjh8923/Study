@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>event 객체의 속성과 메서드</title>
+</head>
+<body>
+
+<h3>이벤트 객체의 프로퍼티 출력</h3>
+<hr/>
+<p id="p">버틀을 클릭하면 이벤트 객체를 출력합니다.</p>
+<button onclick = "f(event)">클릭하세요</button>
+<script>
+function f(e){ //e 파라메타는 event 객체를 받는다
+	let text = "type : " + e.type + "<br/>" //이벤트 종류
+			 + "target : " + e.target + "<br/>" //이벤트를 일으킨 DOM 객체
+			 + "currentTarget" + e.currentTarget + "<br/>"
+			 //이벤트를 일으킨 DOM객체로 리스너 함수 실행 객체
+			 + "defaultPrevented" + e.defaultPrevented;
+			 // 기본기능 중단 여부(true이면 중단)
+	let p = document.getElementById("p");
+	p.innerHTML = text;
+}
+</script>
+</body>
+</html>

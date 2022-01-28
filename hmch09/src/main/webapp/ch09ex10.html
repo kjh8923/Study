@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+let width=1; //테두리 두께
+function down(obj){ //this = span = obj
+	obj.style.fontStyle="italic";
+}
+
+function up(obj){
+	obj.style.fontStyle="normal";
+}
+
+function over(obj){
+	obj.style.borderColor="violet"; //테두리 폭이 0일 때 색은 보이지 않는다
+}
+
+function out(obj){
+	obj.style.borderColor="lightgray";
+}
+
+function wheel(e, obj){
+	if(e.wheelDelta<0){ //wheelDelta 속성은 wheel을 구를시 값
+		width<0?0:width--;
+	}
+	else{
+		width++;
+	}
+	obj.style.borderStyle="ridge";
+	obj.style.borderWidth=width+"px";
+}
+</script>
+</head>
+<body>
+
+<h3>마우스 관련 이벤트 리스너</h3>
+<hr/>
+<div>마우스 관련
+	<span style="display:inline-block" /* wheel 이벤트는 block레벨 일 시만 동작 */
+		  onmousedown="down(this)"
+		  onmouseup="up(this)"
+		  onmouseover="over(this)"
+		  onmouseout="out(this)"
+		  onwheel="wheel(event, this)">이벤트</span>가 발생합니다.
+</div>
+</body>
+</html>

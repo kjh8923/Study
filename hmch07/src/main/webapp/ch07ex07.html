@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>String 객체</title>
+</head>
+<body>
+
+<h3>String 객체의 메소드 활용</h3>
+<hr/>
+<script>
+var a = new String("Boys and Girls"); //String 생성자로 객체 생성
+var b = "!!"; // 초기값을 이용하여 객체 생성
+document.write("a : " + a + "<br/>");
+document.write("b : " + b + "<br/><hr/>");
+
+document.write(a.charAt(0) + "<br/>"); // chatAt(색인번호)은 색인번호의 문자를 반환
+document.write(a.concat(b, "입니다") + "<br/>"); //concat(b,c...)은 a객체에 b,c...열결
+//String 객체는 자신은 변경 안됨
+document.write(a.indexOf("s") + "<br/>"); //indexOf("문자")는 문자와 일치하는 첫번째 색인번호 반환 
+document.write(a.indexOf("And") + "<br/>"); //일치하는 문자가 없으면 -1
+document.write(a.slice(5,8) + "<br/>");
+document.write(a.substr(5,3) + "<br/>"); //substr(start, 개수)로 start 색인번호에서 개수 선택
+document.write(a.toUpperCase() + "<br/>");
+document.write(a.replace("and", "or") + "<br/>");
+document.write("   kitae   ".trim() + "<br/><hr/>"); //trim()은 앞뒤 공백 제거
+
+var sub = a.split(" "); //split(구분문자)는 구분문자를 기준으로 분할하여 배열로 변환
+document.write("a를 빈칸을 기준으로 분리<br/>");
+for(var i=0; i<sub.length; i++){
+	document.write("sub" + i + "=" + sub[i] + "<br/>");
+}
+
+document.write("<hr/>String 메소드를 실행 후 a와 b 변함 없음<br/>");
+document.write("a : " + a + "<br/>");
+document.write("b : " + b + "<br/>");
+</script>
+</body>
+</html>

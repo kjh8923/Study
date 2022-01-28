@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CDN-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> --!>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<title>BS Card</title>
+</head>
+<body>
+
+<div class="conatiner">
+	<h2>기본형 카드</h2>
+	<div class="card"> <!-- card콘테이너 테두리와 패딩을 가짐-->
+		<div class="card-body">Basic card</div>
+	</div>
+</div>
+<br/>
+<div class="conatiner">
+	<h2>header, body, footer로 구분</h2>
+	<!-- 각 구간별로 수평 테두리선 생김, 패딩이 주어짐, 각각 배경색이 주어짐 -->
+	<div class="card"> 
+		<div class="card-header">Header</div>
+		<div class="card-body">Content</div>
+		<div class="card-footer">Footer</div>
+	</div>
+</div>
+<br/>
+<div class="conatiner">
+	<h2>카드에 배경색과 글자색 넣기</h2>
+	<!-- 배경색은 bg-칼라, 글자색은 text-칼라 사용 -->
+	<div class="card bg-primary text-white"> 
+		<div class="card-header">Header</div>
+	</div>	
+	<div class="card bg-success text-white"> 
+		<div class="card-body">Content</div>
+	</div>
+</div>
+<br/>
+<div class="conatiner">
+	<h2>카드에 타이틀, 본문, 링크부를 만들기</h2>
+	<div class="card"> 
+		<div class="card-body">
+			<h4 class="card-title">card title</h4>
+			<p class="card-text">some example text. some example text.</p>
+			<a href="#" class="card-link">card link</a>
+			<a href="#" class="card-link">another link</a>
+			<!-- card에서 링크는 card-link클래스 사용(밑줄제거, 파란색 글자)-->
+		</div>
+	</div>
+</div>
+<br/>
+<div class="conatiner">
+	<h2>카드에 이미지 넣기</h2>
+	<div class="container" style="display:flex">
+		<div class="card" style="width:30%">
+			<img class="card-img-top" src="media/img_avatar1.png" alt="card image" style="width:100%"/> 
+			<div class="card-body">
+				<h4 class="card-title">John Doe</h4>
+				<p class="card-text">some example text. some example text.
+					John Doe is an architect and engineer</p>
+				<a href="#" class="btn btn-primary">see profile</a>
+			</div>
+		</div>
+		<div class="card" style="width:30%">
+			<div class="card-body">
+				<h4 class="card-title">John Doe</h4>
+				<p class="card-text">some example text. some example text.
+					John Doe is an architect and engineer</p>
+				<a href="#" class="btn btn-primary stretched-link">see profile</a>
+				<!-- stretched-link는 card전체에서 클릭 가능 -->
+			</div>
+			<img class="card-img-bottom" src="media/img_avatar6.png" alt="card image" style="width:100%"/> 
+		</div>
+	</div>
+</div>
+<br/>
+<div class="conatiner">
+	<h2>이미지와 card-body를 중첩하기</h2>
+	<div class="container" style="display:flex">
+		<div class="card" style="width:30%">
+			<img class="card-img-top" src="media/img_avatar1.png" alt="card image" style="width:100%"/> 
+			<div class="card-img-overlay"> <!-- card-body 대신 사용 -->
+				<h4 class="card-title">John Doe</h4>
+				<p class="card-text">some example text. some example text.
+					John Doe is an architect and engineer</p>
+				<a href="#" class="btn btn-primary stretched-link">see profile</a>
+			</div>
+		</div>
+	</div>
+</div>
+<br/>
+<div class="conatiner">
+	<h2>card를 벽돌식으로 표시하기(columns)</h2>
+	<!-- class="card-columns"콘테이너를 만들어 그 안에 card를 넣어준다 
+		이때는 card의 내용에 따라 카드의 가로는 동일 하나 높이가 다르게 배치 된다-->
+	<div class="card-columns">
+		<div class="card bg-primary">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-success">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card
+				</p>
+			</div>
+		</div>
+		<div class="card bg-danger">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-info">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-warning">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-dark">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-primary">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>				
+			</div>
+		</div>
+		<div class="card bg-success">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-danger">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-info">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-warning">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-dark">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-warning">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-dark">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="conatiner">
+	<h2>card를 벽돌식으로 표시하기(deck)</h2>
+	<!-- class="card-deck"콘테이너를 만들어 그 안에 card를 넣어준다 
+		이때는 card의 내용에 따라 카드의 가로, 높이가 동일하게 배치 된다-->
+	<div class="card-deck">
+		<div class="card bg-primary">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-success">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card
+				</p>
+			</div>
+		</div>
+		<div class="card bg-danger">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-info">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-warning">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-dark">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-primary">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>				
+			</div>
+		</div>
+		<div class="card bg-success">
+		<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="conatiner">
+	<h2>card를 벽돌식으로 표시하기(group)</h2>
+	<!-- class="card-group"콘테이너를 만들어 그 안에 card를 넣어준다 
+		이때는 card의 내용에 따라 카드의 가로, 높이가 동일하게 배치 된다-->
+	<div class="card-group">
+		<div class="card bg-primary">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-success">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-danger">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-info">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-warning">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-dark">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+		<div class="card bg-primary">
+			<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>				
+			</div>
+		</div>
+		<div class="card bg-success">
+		<div class="card-body text-center">
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>
+				<p class ="card-text">Some text inside the first card</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

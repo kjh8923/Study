@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>submit, reset 이벤트</title>
+</head>
+<body>
+
+<h3>onsubmit 이벤트</h3>
+<hr/>
+
+<!-- onsubmit와 onreset 이벤트 리스너는 form 태그에 만듦 -->
+<form onsubmit="alert('제출완료')">
+	Enter name : <input type="text"/>
+	<input type="submit" value="제출"/>
+</form>
+<br/><br/>
+<form onreset="alert('취소완료')">
+	Enter name : <input type="text"/>
+	<input type="reset" value="취소"/>
+</form>
+</body>
+</html>

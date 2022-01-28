@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>animation 효과</title>
+<style>
+@keyframes bomb{
+	from {/* 시간대 표시로 시작 */
+		font-size:500%; /* 애니메이션에 사용되는 속성 */
+		color:red;
+		} 
+	to{ /* 시간대 표시로 종료 */
+		font-size:100%;
+		color:blue;	
+	}	
+}
+
+h3{/* 애니매이션 효과를 적용할 엘리먼트 선택 */
+	/* 애니매이션 실행 관련 속성 */
+	animation-name :bomb; /* 규칙이름 */
+	animation-duration:3s; /* 주기 */
+	animation-iteration-count:infinite; /* 반복횟수 */
+}
+</style>
+</head>
+<body>
+
+<h3>꽝</h3>
+<hr/>
+<p>꽝 글자가 3초동안 500%에서 시자하여 100%로바뀌는 애니메이션</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>JS로 엘리먼트 동적 구성</title>
+<script>
+function createDIV(){
+	var obj = document.getElementById("parent"); //body 엘리먼트 선택
+	var newDIV = document.createElement("div"); //div 태그 엘리먼트 생성
+	newDIV.innerHTML = "새로 생성된 DIV입니다."; //새로만든 div태그 내용 추가
+	//newDIV.setAttribute("id", "myDiv"); //div 태그에 id속성 추가
+	newDIV.id="myDIV"; //위와 동일
+	newDIV.style.backgroundColor="yellow"; //div의 stsyle(css)속성 추가
+	newDIV.onclick=function(){ //newDIV에 클릭이벤트 추가
+		var p = this.parentElement; //부모 HTML 태그 요소
+		p.removeChild(this); //자신을 부모로부터 제거
+	};
+	obj.appendChild(newDIV); //appendChild는 자식으로 제일 마지막에 추가
+}
+</script>
+</head>
+<body id = "parent">
+
+<h3>DIV 객체를 동적으로 생성, 삽입, 삭제하는 예제</h3>
+<hr/><p>DOM 트리에 동적으로 객체를 삽입할 수 있습니다.
+createElement(), appendChild(), removeChild() 메소드를 이용하여
+새로운 객체 생성, 삽입, 삭제하는 예제입니다.</p>
+<a href="javascript:createDIV()">DIV 생성</a>
+
+</body>
+</html>

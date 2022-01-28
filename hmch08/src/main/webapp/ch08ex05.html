@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>document 객체의 속성들</title>
+<script>
+let text = "문서 로딩 중일 때 readyState = " + document.readyState + "\n";
+</script>
+</head>
+<body style = "background-color:yellow; color:blue; direction:rtl" onload="printProperties()">
+<!-- direction:rtl은 오른쪽 정렬 -->
+<!-- onload 이벤트리스너 속성은 화면의 로딩 완료 이벤트로 화면 출력이 완료된 후에 js 실행 -->
+<h3>document의 주요 프로퍼티</h3>
+<hr/>
+<a href="http://www.naver.com">네이버 홈페이지</a>
+<div>이곳은 div 영역입니다.</div>
+<input id = "input" type = "text" value="여기 포커스가 있습니다.">
+
+<script>
+//문서가 완전히 로드(출력)되었을 때, 현재 document의 프로퍼티 출력
+function printProperties(){
+	document.getElementById("input").focus(); //<input>태그에 포커스를 줌
+	
+	text += "1.location = " + document.location + "\n";
+	//text는 head안에 있는 script에서 정의되어 있느나 다른 위치의 script에서도 사용 가능
+	//document.location은 url 정보를 나타내며 windo.location과 유사하여 현재는 document.location은 사용하지 않고 document.URL을 사용
+	text += "2.URL = " + document.URL + "\n";
+	text += "3.title = " + document.title + "\n"; //title 태그의 내용
+	text += "4.head의 id = " + document.head.id + "\n"; //head 태그의 id
+	text += "5.body color = " + document.body.style.color + "\n"; //body 태그의 color
+	text += "6.domain = " + document.domain + "\n"; //url 중 port 번호 앞 부분
+	text += "7.lastModified = " + document.lastModified + "\n"; //마지막 수정 시간
+	text += "8.defaultView = " + document.defaultView + "\n"; //기본창
+	text += "9.문서의 로드 완료 후 readyState = " + document.readyState + "\n"; //로딩 완료된 상태이므로 complete
+	text += "10.referrer = " + document.referrer + "\n";
+	text += "11.activeElement = " + document.activeElement.value + "\n"; //현재 활성화 된 엘리먼트의 입력 값
+	text += "12.documentElement의 태그 이름 = " + document.documentElement.tagName + "\n"; //HTML
+	alert(text);
+}
+</script>
+</body>
+</html>

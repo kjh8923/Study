@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>on 이벤트 리스너 속성</title>
+</head>
+<body>
+
+<h3>마우스 올려 보세요</h3>
+<hr/>
+<img src="media/apple.png" alt="이미지"
+		onmouseover="this.src='media/banana.png'"
+		onmouseout="this.src='media/apple.png'">
+		<!-- onmouseover, onmouseout은 마우스 관련 이벤트리스너 속성
+			리스너 속성 값으로는 자바스크립트코드를 사용할 수 있다. 
+			따옴표안에 다른 따옴표 사용시는 다른 따옴표를 사용.
+			this는 자바스크립트 키워드로 이벤트 발생 객체 또는 자신 객체 표시.
+			src는 attribute속성 표시시 .속성값으로 사용-->
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>onmouse 이벤트</title>
+<style>
+div{
+	background : skyblue;
+	width : 250px;
+}
+</style>
+</head>
+<body>
+
+<h3>마우스 이벤트 객체의 프로퍼티와 onmousemove</h3>
+<hr/>
+<p>이미지 위에 마우스를 움직일 때 onmousemove 리스너가 실행되고,
+마우스의 위치를 보여줍니다<br/><br/>
+<img src="media/beach.png" onmousemove="where(event)"><br/><br/>
+<div id="div"></div>
+<script>
+let div = document.getElementById("div");
+function where(e){
+	let text = "버튼 = " + e.button + "<br/>";
+	//0:아무것도 눌러지지 않음, mousemove에서는 무조건 0
+	//1:왼쪽 버툰
+	//2:오른쪽 버튼
+	//3:왼쪽 오른쪽 모두
+	//4:중간 버튼
+	text += "(screenX, screenY) = " + e.screenX + "," + e.screenY + "<br/>";
+	//스크린을 기준으로 한 마우스 좌표
+	text += "(clientX, clientY) = " + e.clientX + "," + e.clientY + "<br/>";
+	//브라우저 윈도우의 문서출력 영역 내에서의 마우스 좌표(부모)
+	text += "(offsetX, offsetY) = " + e.offsetX + "," + e.offsetY + "<br/>"
+	//이벤트객체 내에서의 마우스 좌표
+	text += "(x,y) = " + e.x + "," + e.y + "\n";
+	//부모 객체로 부터의 마우스 좌표
+	div.innerHTML = text;
+}
+</script>
+</body>
+</html>

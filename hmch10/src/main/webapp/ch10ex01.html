@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>window창 열기</title>
+<script>
+function load(URL){
+	window.open(URL, "myWin", "left=300, top=300, width=1000, height=1000");
+	//window 이름은 myWin, left,top은 window창이 뜨는 위치, width,height는 window창 크기
+	//window 이름을 지정하면 동일한 창을 이용
+}
+</script>
+</head>
+<body>
+
+<h3>window.open()으로 윈도우 열기</h3>
+<hr/>
+<!-- href속성에 js사용시에는 javascript:를 사용 -->
+<a href="javascript:load('http://www.graceland.com')">
+         엘비스 프레슬리 홈 페이지</a><br>
+<a href="javascript:load('http://www.universalorlando.com')">
+         유니버설 올랜드 홈 페이지</a><br>
+<a href="javascript:load('http://www.disneyworld.com')">
+         디즈니월드 홈 페이지</a><br>         
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>css합치기와 중첩처리</title>
+<link type="text/css" rel="stylesheet" href="external.css"/>
+<style>
+/* internal css */
+p{
+	color:blue;
+	font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<h3>p태그에 스타일 중첩</h3>
+<hr/>
+<p>Hello,students!</p>  <!-- external, internal css 상속 -->
+<p style="font-size:25px">안녕하세요 교수님!</p>
+<!-- font-size가 중첩되어 inline것이 적용됨 -->
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CDN-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<title>BS container</title>
+</head>
+<body>
+
+<div class="container pt-3" style="border:1px solid red;"> <!-- pt-3 = padding-top : 16px -->
+	<h1>My First Bootstrap Page</h1>
+	<p>This is some text.</p>
+	<p>원래 div는 블록이므로 좌우 100%인데    
+	클래스를 .container를 적용하여 앞장의 
+	단말기 크기에 따라 크기가 조정됨</p>
+</div>
+<br/>
+<div class="container-fluid pl-5" style="border:1px solid red;"> <!-- 좌우 100%  full-width, pl-5 = padding-left : 48px -->
+	<h1>My First Bootstrap Page</h1>
+	<p>This is some text.</p>
+</div>
+<br/>
+<div class="container p-3 my-3 border">
+	<h1>My First Bootstrap Page</h1>
+	<p>This is some text.</p>
+</div>
+<div class="container p-3 my-3 bg-dark text-white">
+	<h1>My First Bootstrap Page</h1>
+	<p>This is some text.</p>
+</div>	
+<div class="container p-3 my-3 bg-primary text-white">
+	<h1>My First Bootstrap Page</h1>
+	<p>This is some text.</p>
+</div>
+<br/>
+<!-- xs만 100% 그 이상은 기본 너비를 커버 -->
+<div class="container-sm border">.container-sm
+	<h1>My First Bootstrap Page</h1>
+	<p>This is some text.</p>
+</div>
+<!-- md이상은 커버하나 그 이하는 커버 못함  -->
+<div class="container-md mt-3 border">.container-md
+	<h1>My First Bootstrap Page</h1>
+	<p>This is some text.</p>
+</div>
+<!-- lg이상은 커버하나 그 미만은 커버 못함 -->
+<div class="container-lg mt-3 border">.container-lg
+	<h1>My First Bootstrap Page</h1>
+	<p>This is some text.</p>
+</div>
+<!-- xl만 커버 그이하는 커버 못함 -->
+<div class="container-xl mt-3 border">.container-xl
+	<h1>My First Bootstrap Page</h1>
+	<p>This is some text.</p>
+</div>		
+</body>
+</html>

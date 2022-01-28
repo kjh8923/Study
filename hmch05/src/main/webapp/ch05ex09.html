@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>list로 메뉴 만들기</title>
+<style>
+#menubar{
+	background:olive;
+}
+
+#menubar ul{
+	margin:0;
+	padding:0;
+	width:567px;
+}
+
+#menubar ul li{
+	display:inline-block; /* li는 block태그인데 일렬배치를 위해 inline-block */
+	list-style-type:none; 
+	padding:0px 15px;
+}
+
+#menubar ul li a{
+	color:white;
+	text-decoration:none;
+}
+
+#menubar ul li a:hover{ /* 가상클래스로 하이퍼링크에 마우스를 댈 때 */
+	color:violet;
+}
+</style>
+</head>
+<body>
+
+<h3>list응용 메뉴 만들기</h3>
+<hr/>
+<nav id="menubar"> <!-- 시맨틱태그로 nav는 메뉴를 의미하는 태그이며 블록태그 -->
+	<ul>
+		<li><a href="#">Home</a></li> <!-- li를 메뉴항목으로 사용시는 내용을 하이퍼링크 a를 사용 -->
+		<li><a href="#">Espresso</a></li>
+		<li><a href="#">Cappuccino</a></li>
+		<li><a href="#">Cafe Latte</a></li>
+		<li><a href="#">F.A.Q</a></li>
+	</ul>
+</nav>
+</body>
+</html>

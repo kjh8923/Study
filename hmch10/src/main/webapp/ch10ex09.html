@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>location객체</title>
+<script>
+function load(){
+	let select = document.getElementById("site");
+	window.location = select.options[select.selectedIndex].value;
+	//location객체 값은 현재 페이지에 로딩된 url
+	//window.location은 현재창에 _self로 출력
+	/* var win=window.open(); - 새창으로 열기
+	   win.location="http://www.naver.com";*/ 
+}
+</script>
+</head>
+<body>
+
+<h3>window.location으로 웹 사이트 접속</h3>
+<hr/>
+사이트 선택 :
+<select id="site">
+	<option value="http://www.naver.com" selected>네이버</option>
+	<option value="http://www.google.com">구글</option>
+	<option value="http://www.microsoft.com">마이크로소프트</option>
+</select>
+<button onclick="load()">웹 사이트 접속</button>
+</body>
+</html>

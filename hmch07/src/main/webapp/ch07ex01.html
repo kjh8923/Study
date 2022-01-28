@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>core(기본) 객체</title>
+</head>
+<body>
+
+<h3>객체 생성 및 활용</h3>
+<hr/>
+<script>
+//Date 객체 생성(Date코어 객체를 new 키워드로 만들어 Date 가진 여러 속성이나 메서드를 활용)
+var today = new Date(); //현재 시간을 나타내는 객체
+
+//Date 객체의 toGMTString() 메소드(지역의 현재 시간을 문자열로 표시) 호출
+document.write("현재 시간 : " + today.toGMTString() + "<br/>");
+
+//String 객체 생성
+var mystr = new String("자바스크립트 공부하기");
+document.write("mystr의 내용 : " + mystr + "<br/>");
+document.write("mystr의 길이 : " + mystr.length + "<br/>");
+//String core 객체가 지닌 length속성(글자수) 이용
+//length는 readonly속성으로 값을 변경 불가능 mystr.length = 10은 에러
+</script>
+</body>
+</html>

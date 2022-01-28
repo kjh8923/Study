@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>사용자 객체 생성자</title>
+</head>
+<body>
+
+<h3>사용자가 만드는 생성자를 이용하여 객체 생성</h3>
+<hr/>
+<div id="div1"></div>
+<!-- write 함수대신 이곳에 출력 -->
+
+<script>
+//사용자가 만드는 생성자는 함수이며 이름의 첫자를 대문자로 만들고 파라메타는 그 객체의 속성(메서드 제외)으로 한다
+function Person(first,last,age,eye){
+	//속성값을 초기화 하는데 받은 파라메타 값으로 초기화
+	this.first = first;
+	this.last = last;
+	this.age = age;
+	this.eye = eye;
+	//메서드
+	this.fullname =function(){
+		return this.first + this.last;
+	} 
+}
+
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48 , "green");
+//const는 var을 나타내는 ES6(자바6버젼 부터 사용되는  개선된 var)
+//사용자가 만든 생성자로 동일한 타입의 객체를 만듦
+document.getElementById("div1").innerHTML = "My father is " + myFather.age + ", My mother is " + myMother.age;
+</script>
+</body>
+</html>

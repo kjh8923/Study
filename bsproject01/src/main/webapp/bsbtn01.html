@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CDN-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> --!>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<title>BS button</title>
+</head>
+<body>
+
+<div class="container">
+	<h2>BS button 클래스들</h2>
+	<!-- 버튼의 기본 클래스는 btn이고 버튼 색상을 나타내는 btn-색상단어 클래스가 있음 -->
+	<button type="button" class="btn">Basic</button>
+	<button type="button" class="btn btn-primary">Primary</button>
+	<button type="button" class="btn btn-secondary">Secondary</button>
+	<button type="button" class="btn btn-success">Success</button>
+	<button type="button" class="btn btn-info">Info</button>
+	<button type="button" class="btn btn-warning">Warning</button>
+	<button type="button" class="btn btn-danger">Danger</button>
+	<button type="button" class="btn btn-dark">Dark</button>
+	<button type="button" class="btn btn-light">Light</button>
+	<button type="button" class="btn btn-link">Link</button>
+</div>
+
+<div class="container">
+	<h2>BS button계열 태그들</h2>
+	<a href="#" class="btn btn-info" role="button">Link Button</a><!-- role 속성추가 -->
+	<input type="button" class="btn btn-info" value="Input Button"/>
+	<input type="submit" class="btn btn-info" value="Submit Button"/>
+	<input type="reset" class="btn btn-info" value="reset Button"/>
+</div>
+
+<div class="contaniner">
+	<h2>Button Outline</h2> <!-- hover 시에는 배경색 보임 -->
+	<button type="button" class="btn btn-outline-primary">Primary</button>
+	<button type="button" class="btn btn-outline-secondary">Secondary</button>
+	<button type="button" class="btn btn-outline-success">Success</button>
+	<button type="button" class="btn btn-outline-info">Info</button>
+	<button type="button" class="btn btn-outline-warning">Warning</button>
+	<button type="button" class="btn btn-outline-danger">Danger</button>
+	<button type="button" class="btn btn-outline-dark">Dark</button>
+	<button type="button" class="btn btn-outline-light text-dark">Light</button>
+</div>
+
+<div class="contaniner">
+	<h2>Button Sizes</h2> <!-- hover 시에는 배경색 보임 -->
+	<button type="button" class="btn btn-primary btn-lg">large</button>
+	<button type="button" class="btn btn-secondary">default</button>
+	<button type="button" class="btn btn-success btn-sm">small</button>
+</div>
+
+<div class="contaniner">
+	<h2>Button Level Buttons</h2>
+	<button type="button" class="btn btn-primary btn-block">full width button1</button>
+	<button type="button" class="btn btn-secondary btn-block">full width button2</button>
+</div>
+
+<div class="contaniner">
+	<h2>Button Active/Disabled</h2>
+	<button type="button" class="btn btn-primary">default</button>
+	<button type="button" class="btn btn-primary active">active</button> <!-- 활성화 된 버튼, active는 클래스임 -->
+	<button type="button" class="btn btn-primary" disabled>disabled</button><!-- 비활성화 버튼(클릭할 수 없음), disabled는 클래스가 아닌 속성 -->	
+	<a href="#" class="btn btn-primary disabled">disabled Link</a> <!-- a의 비활성화 클래스 disabled -->
+</div>
+</body>
+</html>

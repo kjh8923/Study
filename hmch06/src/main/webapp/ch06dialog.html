@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>dialog(대화창)</title>
+</head>
+<body>
+
+<h3>자바스크립트로 사용자 입력 및 대화</h3>
+<hr/>
+
+<div id="result"></div><!-- js의 결과를 표시해 줄 엘리먼트 -->
+<script>
+var result = document.getElementById("result");
+// var은 변수 선언 키워드
+// getElementById("id명")은 함수로 ID값으로 해당 엘리먼트를 JS의 변수로 설정
+function promptEX(){
+	var ret = prompt("이름을 입력하세요", "황기태"); //prompt 대화창 처리
+	//var ret는 입력된 값을 받는 변수 선언
+	if(ret == null){
+		//취소 버튼이나 다이얼로그를 닫은 경우
+		result.innerHTML = "취소나 그냥 닫았군요";
+		//innerHTML 속성은 내용부분(콘텐츠)를 나타냄 <div id="result">여기가 콘텐츠</div>
+	}
+	else{
+		//ret에는 사용자가 입력한 문자열 아무값도 입력하지 않으면, ret=""
+		result.innerHTML = ret;
+	}
+}
+
+function confirmEX(){
+	//confirm 대화창
+	var ret = confirm("전송할까요?"); //confirm대화창은 true, false를 반환
+	if(ret == true){
+		result.innerHTML = "확인을 눌렀군요";
+	}
+	else{
+		result.innerHTML = "취소를 눌렀군요";
+	}
+}
+
+function alertEX(){
+	//alert 대화창
+	alert("클릭하셨습니다.");
+}
+</script>
+
+<button type="button" onclick="promptEX()">프롬프트 다이얼로그</button>
+<button type="button" onclick="confirmEX()">확인 다이얼로그</button>
+<button type="button" onclick="alertEX()">경고 다이얼로그</button>
+</body>
+</html>
