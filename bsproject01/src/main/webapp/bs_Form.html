@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CDN-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> --!>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<title>BS Form</title>
+</head>
+<body>
+
+<div class="container">
+	<h3>수직배치 form</h3>
+	<form action="#" method="POST">
+		<div class="form-group">
+			<!-- form-group클래스는 수직배치시 입력요소간 여유 확보 -->
+			<!-- label과 입력요소 input을 수용 -->
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" id="email" placeholder="Enter email" name="eamil"/>
+			<!-- 입력요소에는 form-control 클래스를 추가(100%너비) -->
+		</div>
+		<div class="form-group">
+			<!-- form-group클래스는 수직배치시 입력요소간 여유 확보 -->
+			<!-- label과 입력요소 input을 수용 -->
+			<label for="pwd">Password:</label>
+			<input type="password" class="form-control" id="pwd" placeholder="Enter pswd" name="pswd"/>
+			<!-- 입력요소에는 form-control 클래스를 추가(100%너비) -->
+		</div>
+		<!-- checkbox는 from-check, form-check-label, form-check-input 클래스 사용 -->
+		<div class="form-group form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="checkbox" name="remember">Remember me
+			</label>
+		</div>
+		<button type="submit" class="btn btn-primary">
+			Submit
+		</button>
+		<!-- button은 from-control을 사용안하고 인라인으로 사용 -->
+	</form>
+</div>
+<br/><br/><br/>
+<div class="container">
+	<h3>form입력요소들 수평배치</h3>
+	<!-- form안에 class="from-inline" 작성 -->
+	<form action="#" method="POST" class="form-inline">
+	<!-- form-group클래스 사용 안함 -->
+		<label for="email" class="mr-sm-2">Email:</label>
+		<input type="email" class="form-control mr-sm-2" id="email" placeholder="Enter email" name="eamil"/>
+		<label for="pwd" class="mr-sm-2">Password:</label>
+		<input type="password" class="form-control mr-sm-2" id="pwd" placeholder="Enter pswd" name="pswd"/>
+		<div class="form-check">
+			<label class="form-check-label mr-sm-2">
+				<input class="form-check-input mr-sm-2" type="checkbox" name="remember">Remember me
+			</label>
+		</div>
+		<button type="submit" class="btn btn-primary">
+			Submit
+		</button>
+	</form>
+	<!-- 일렬 배치 이므로 이웃하는 엘리먼트와의 간격을 위해 mr-sm-2줌 -->
+</div>
+<br/><br/><br/>
+<div class="container">
+	<h3>row와 col을 사용하여 일렬배치</h3>
+	<form action="#" method="POST">
+		<div class="row">
+			<div class="col">
+				<input type="text" class="form-control" id="email" placeholder="Enter email" name=email>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<input type="password" class="form-control" id="pwd" placeholder="Enter pswd" name=pswd>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary mt-3">
+			Submit
+		</button>
+	</form>
+</div>
+</body>
+</html>

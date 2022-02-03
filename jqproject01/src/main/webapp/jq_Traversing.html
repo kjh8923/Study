@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CDN-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> --!>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<title>Traverse</title>
+<style>
+.ancestors * { /* class ancestors의 모든 후손들 */
+	display : block;
+	border : 2px solid lightgrey;
+	color : lightgrey;
+	padding : 5px;
+	margin : 15px;
+}
+</style>
+</head>
+<body>
+
+<div class="ancestors"> <!-- 고조부 -->
+	<div style="width:500px;">
+		div (증조부)
+		<ul>
+			ul (조부)
+			<li>
+				li (부모)
+				<span>span</span>
+			</li>
+		</ul>
+	</div>
+	<div style="width:500px;">
+		div (조부)
+		<p>
+			p (부모)
+			<span>span</span>
+		</p>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	/*$("span").parent().css({"color" : "red", "border" : "2px solid red"})*/
+	//부모만 선택
+	/*$("span").parents().css({"color" : "red", "border" : "2px solid red"})*/
+	//모든 조상 선택
+	$("span").parents("ul").css({"color" : "red", "border" : "2px solid red"})
+	//조상 중 ul만 선택
+	/*$("span").parentsUntil("div").css({"color" : "red", "border" : "2px solid red"})*/
+	//조상 중 첫번째 div와의 사이에 있는 조상(div는 제외)
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CDN-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> --!>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<title>Form의 입력 요소들</title>
+</head>
+<body>
+
+<div class="container">
+	<h3>textarea</h3>
+	<form>
+		<div class="form-group">
+			<label for="comment">Comment:</label>
+			<textarea class="form-control" row="5" id="comment" name="text">
+			</textarea>
+		</div>
+	</form>
+</div>
+<br/><br/><br/>
+<div class="container">
+	<h3>checkbox 수직 배치</h3>
+	<form action="#">
+		<div class="form-check form-group">
+			<label class="form-check-label" for="check1">
+				<input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>Option1
+			</label>
+		</div>
+		<div class="form-check form-group">
+			<label class="form-check-label" for="check2">
+				<input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">Option2
+			</label>
+		</div>
+	</form>
+</div>
+<br/><br/><br/>
+<div class="container">
+	<h3>checkbox 수평 배치</h3>
+	<form action="#">
+		<div class="form-check-inline">
+			<label class="form-check-label" for="check1">
+				<input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>Option1
+			</label>
+		</div>
+		<div class="form-check-inline">
+			<label class="form-check-label" for="check2">
+				<input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">Option2
+			</label>
+		</div>
+	</form>
+</div>
+<br/><br/><br/>
+<div class="container">
+	<h3>radio 수평 배치</h3>
+	<form action="#">
+		<div class="form-check-inline">
+			<label class="form-check-label" for="check1">
+				<input type="radio" class="form-check-input" id="check1" name="option1" value="something" checked>Option1
+			</label>
+		</div>
+		<div class="form-check-inline">
+			<label class="form-check-label" for="check2">
+				<input type="radio" class="form-check-input" id="check2" name="option1" value="something">Option2
+			</label>
+		</div>
+	</form>
+</div>
+<br/><br/><br/>
+<div class="container">
+	<h3>select 단일 선택</h3>
+	<form action="#">
+		<div class="form-group">
+			<label for="sel1">Select list(select one):</label>
+			<select class="form-control" id="sel1" name="sellist1"> <!-- width 100% -->
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>
+		</div>
+	</form>
+</div>
+<br/><br/><br/>
+<div class="container">
+	<h3>select 다중 선택(컨트롤키를 누르고 선택)</h3>
+	<form action="#">
+		<div class="form-group">
+			<label for="sel1">Select list(select one):</label>
+			<select class="form-control" id="sel1" multiple name="sellist1"> <!-- width 100% -->
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>
+		</div>
+	</form>
+</div>
+<br/><br/><br/>
+<div class="container">
+	<h3>문자정보창(입력창 아님)</h3>
+	<form action="#">
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Default form control" name="text1">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control-plaintext" placeholder="form control with plain text" name="text2">
+			<!-- form-control-plaintext클래스 순수 문자 정보 창 -->
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+<br/><br/><br/>
+<div class="container">
+	<h3>range와 file type시</h3>
+	<form action="#">
+		<div class="form-group">
+			<input type="range" class="form-control-range" name="range">
+			<!-- type="range" 시는 form-control-range를 사용해야 width 100%차지 -->
+		</div>
+		<div class="form-group">
+			<input type="file" class="form-control-file border" name="file">
+			<!-- type="file" 시는 form-control-file를 사용해야 width 100% 차지, border클래스도 줌  -->
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+</body>
+</html>
