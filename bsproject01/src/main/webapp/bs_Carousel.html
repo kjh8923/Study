@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CDN-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> --!>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<title>Carousel</title>
+<style>
+.carousel-inner img{
+	width : 100%;
+	height : 100%
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+	width : 35px;
+	height : 35px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+	<!-- carousel 컨테이너 slide는 슬라이드 효과, data-ride는 로딩 즉시 carousel 실행 -->
+	<div id="demo" class="carousel slide" data-ride="carousel">
+		<!-- indicators는 slide진행을 나타내주는 부호 -->
+		<ul class="carousel-indicators"> <!-- 수평배치 -->
+			<!-- data-target은 인디케이터가 보여질 엘리먼트 -->
+			<!-- data-slide-to는 슬라이드 번호 -->
+			<li data-target="#demo" data-slide-to="0" class="active"></li>
+			<li data-target="#demo" data-slide-to="1"></li>
+			<li data-target="#demo" data-slide-to="2"></li>
+		</ul>
+		<!-- The slideshow는 slide를 처리 -->
+		<!-- carousel-inner컨테이너 안에 슬라이드 배치 -->
+		<div class="carousel-inner">
+			<div class="carousel-item active"> <!-- 슬라이드 이미지 처리 -->
+				<img src="media/la.jpg" alt="Los Angeles" width="1100" height="500">
+				<div class="carousel-caption"> <!-- 자막처리 -->
+					<h3>Los Angeles</h3>
+					<p>We had such a great time in LA!</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="media/chicago.jpg" alt="Chicago" width="1100" height="500">
+				<div class="carousel-caption"> <!-- 자막처리 -->
+					<h3>Chicago</h3>
+					<p>We had such a great time in Chicago!</p>
+				</div>			
+			</div>
+			<div class="carousel-item">
+				<img src="media/ny.jpg" alt="New York" width="1100" height="500">
+				<div class="carousel-caption"> <!-- 자막처리 -->
+					<h3>New York</h3>
+					<p>We had such a great time in New York!</p>
+				</div>
+			</div>
+		</div>
+		<!-- Left and Right controls -->
+		<a class="carousel-control-prev" href="#demo" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#demo" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+	</div>
+</div>
+</body>
+</html>
