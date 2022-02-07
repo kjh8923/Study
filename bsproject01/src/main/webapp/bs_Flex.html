@@ -37,7 +37,7 @@
 </div>
 
 <div class="container mt-3">
-	<h3>flex내부 엘리먼트 수평 배치</h3>
+	<h3 style="border:1px solid black;">flex내부 엘리먼트 수평 배치</h3>
 	<h4>flex-row</h4>
 	<div class="d-flex flex-row bg-secondary text-white">
 	<!-- flex-row는 좌측부터 배치 -->
@@ -55,7 +55,7 @@
 </div>
 
 <div class="container mt-3">
-	<h3>flex내부 엘리먼트 수직 배치</h3>
+	<h3 style="border:1px solid black;">flex내부 엘리먼트 수직 배치</h3>
 	<h4>flex-column</h4>
 	<div class="d-flex flex-column bg-secondary text-white">
 	<!-- flex-column는 위부터 배치 -->
@@ -69,6 +69,89 @@
 		<div class="p-2 bg-info">Flex item1</div>
 		<div class="p-2 bg-warning">Flex item2</div>
 		<div class="p-2 bg-primary">Flex item3</div>
+	</div>
+</div>
+
+<div class="container mt-3">
+	<h3>d-flex 내부 엘리먼트 배치 방법(justify-content-start/end/center/between/around)</h3>
+	<div class="d-flex justify-content-start bg-secondary mb-3"> <!-- 왼쪽 정렬 -->
+		<div class="p-2 bg-info">Flex item1</div>
+		<div class="p-2 bg-warning">Flex item2</div>
+		<div class="p-2 bg-primary">Flex item3</div>
+	</div>
+	<div class="d-flex justify-content-end bg-secondary mb-3"> <!-- 오른쪽 정렬 -->
+		<div class="p-2 bg-info">Flex item1</div>
+		<div class="p-2 bg-warning">Flex item2</div>
+		<div class="p-2 bg-primary">Flex item3</div>
+	</div>
+	<div class="d-flex justify-content-center bg-secondary mb-3"> <!-- 중앙 정렬 -->
+		<div class="p-2 bg-info">Flex item1</div>
+		<div class="p-2 bg-warning">Flex item2</div>
+		<div class="p-2 bg-primary">Flex item3</div>
+	</div>
+	<div class="d-flex justify-content-between bg-secondary mb-3"> 
+	<!-- 내부 엘리먼트를 각각 분리해서 처음, 중앙, 마지막에 배치 -->
+		<div class="p-2 bg-info">Flex item1</div>
+		<div class="p-2 bg-warning">Flex item2</div>
+		<div class="p-2 bg-primary">Flex item3</div>
+	</div>
+	<div class="d-flex justify-content-around bg-secondary mb-3"> 
+	<!-- 내부 엘리먼트를 각각 분리해서 왼쪽 중앙, 중앙, 오른쪽 중앙에 배치 -->
+		<div class="p-2 bg-info">Flex item1</div>
+		<div class="p-2 bg-warning">Flex item2</div>
+		<div class="p-2 bg-primary">Flex item3</div>
+	</div>
+</div>
+
+<div class="container mt-3">
+	<h3>d-flex 내부 원소 균등하게 꽉 채우기</h3>
+	<div class="d-flex mb-3"> <!-- flex-row가 생략 -->
+		<div class="p-2 flex-fill bg-info">Flex item1(flex-fill)</div> <!-- 내부엘리먼트에 flex-fill -->
+		<div class="p-2 flex-fill bg-warning">Flex item2(flex-fill)</div>
+		<div class="p-2 flex-fill bg-primary">Flex item3(flex-fill)</div>
+	</div>
+</div>
+
+<div class="container mt-3">
+	<h3>d-flex 내부 채울시 마지막 내부 원소로 꽉 채우기</h3>
+	<div class="d-flex mb-3"> <!-- flex-row가 생략 -->
+		<div class="p-2 bg-info">Flex item1</div> 
+		<div class="p-2 bg-warning">Flex item2</div>
+		<div class="p-2 flex-grow-1 bg-primary">Flex item3(flex-grow-1)</div> <!-- 마지막 원소로 채우기 -->
+	</div>
+</div>
+
+<div class="container mt-3">
+	<h3>d-flex 내부 채울시 원소가 채우고 난 나머지 공간 잘라내기</h3>
+	<div class="d-flex mb-3"> <!-- flex-row가 생략 -->
+		<div class="p-2 bg-info">Flex item1</div> 
+		<div class="p-2 bg-warning">Flex item2</div>
+		<div class="p-2 flex-shrink-1 bg-primary">Flex item3(flex-shrink-1)</div> <!-- 나머지 삭제 -->
+	</div>
+</div>
+
+<div class="container mt-3">
+	<h3>flex-item의 순서 지정</h3>
+	<div class="d-flex mb-3"> <!-- flex-row가 생략 -->
+		<div class="p-2 bg-info order-3">Flex item1(order-3)</div> 
+		<div class="p-2 bg-warning order-1">Flex item2(order-1)</div>
+		<div class="p-2 bg-primary order-2">Flex item3(order-2)</div>
+	</div>
+</div>
+
+<div class="container mt-3">
+	<h3>auto margin</h3>
+	<div class="d-flex mb-3 bg-secondary"> <!-- flex-row가 생략 -->
+		<div class="p-2 bg-info mr-auto">Flex item1(mr-auto)</div>
+		<!-- 자신을 제외한 원소 오른쪽 정렬 --> 
+		<div class="p-2 bg-warning">Flex item2</div>
+		<div class="p-2 bg-primary">Flex item3</div>
+	</div>
+	<div class="d-flex mb-3 bg-secondary"> <!-- flex-row가 생략 -->
+		<div class="p-2 bg-info">Flex item1</div> 
+		<div class="p-2 bg-warning">Flex item2</div>
+		<div class="p-2 bg-primary ml-auto">Flex item3(ml-auto)</div>
+		<!-- 자신을 제외한 원소 왼쪽 정렬 -->
 	</div>
 </div>
 </body>

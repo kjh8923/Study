@@ -14,39 +14,25 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 <title>Insert title here</title>
-<style>
-.div{
- width : 300px;
- height : 200px;
- background-color : skyblue;
- border : 1px solid black;
- display : none;
-}
-
-.container{
- width : 300px;
- height : 200px;
- background-color : skyblue;
- float : left;
-}
-</style>
 </head>
 <body>
-<div class="container2">
-	<button id="toggle">더보기</button>
-	<div class = "div">
-	<img src="media/w3jquery.gif">
-	</div>
-</div>
 
-<div class="container"></div>
+<p>클릭 하거나 움직이거나</p>
 
 <script>
 $(document).ready(function(){
-	$("#toggle").click(function(){
-		$(".div").slideToggle(500);
+	$("p").on({
+		mouseenter:function(){
+			$(this).css("background", "lightgray")
+		},
+		mouseleave:function(){
+			$(this).css("background", "lightblue")
+		},
+		dblclick:function(){
+			$(this).css("background", "lightgreen")
+		}
 	});
 });
-</script> 
+</script>
 </body>
 </html>
