@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee; http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>jspch08ex03</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 나의 웹프로젝트내의 모든 서브렛에서 공통으로 사용할 수 있는 매개변수 -->
+  <context-param> <!-- 모든 서브렛에서 공통으로 사용 가능한 파라메타 -->
+  	<param-name>id</param-name> <!-- 파라메타 이름 -->
+  	<param-value>abcdef</param-value> <!-- 파라메타 값 -->
+  </context-param>
+  <context-param> 
+  	<param-name>pw</param-name> 
+  	<param-value>123456</param-value> 
+  </context-param>
+  <context-param> 
+  	<param-name>path</param-name> 
+  	<param-value>C:/com/kjh</param-value> 
+  </context-param>
+</web-app>
