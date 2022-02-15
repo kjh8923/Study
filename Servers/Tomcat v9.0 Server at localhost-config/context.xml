@@ -36,7 +36,7 @@
     	password = "tiger"
     	name = "jdbc/Oracle11g"
     	type = "javax.sql.DataSource"
-    	maxActive = "50"
-    	maxWait = "1000"
+    	maxTotal = "50"
+    	maxWaitMillis = "1000"
     />
 </Context>

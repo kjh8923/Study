@@ -8,5 +8,6 @@
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
+    <welcome-file>index.do</welcome-file> <!-- 확장자 패턴시 기본경로 -->
   </welcome-file-list>
 </web-app>

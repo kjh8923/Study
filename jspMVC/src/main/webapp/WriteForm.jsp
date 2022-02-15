@@ -18,35 +18,37 @@
 <title>게시판 입력 from</title>
 </head>
 <body>
-
-<h3>게시판 입력 form</h3>
-<hr/>
 <div class="container">
-	<table width="500" cellpadding="0" cellspacing="0" border="1">
-		<form action="Write.do" method="POST">
-			<tr>
-				<td>이름</td>
-				<td>
-					<input type="text" name="bName" size="50"/>
-				</td>
-			</tr>
-			<tr>
-				<td>제목</td>
-				<td>
-					<input type="text" name="bTitle" size="50"/>
-				</td>
-			</tr>
-			<tr>
-				<td>내용</td>
-				<td>
-					<textarea name="bContent" row="10" cols="30"></textarea>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" value="입력">&nbsp;&nbsp;<a href="list.do">목록보기</a></td>
-			</tr>
-		</form>
-	</table>
+	<h3>게시판 입력 form</h3>
+	<hr/>
+	<form action="write.do" method="POST">
+		<div class="input-group mb-3 input-group-sm">	<!-- input과 도움말을 묶는 클래스, input-group-sm/lg 도움말 사이즈 -->
+			<div class="input-group-prepend">	<!-- 도움말 위치 표시 클래스 -->
+				<span class="input-group-text">이름</span> <!-- 도움말 내용 표시 클래스 -->
+			</div>
+			<input type="text" class="form-control" placeholder="Username" id="usr" name="bName"/>
+		</div>
+		<div class="input-group mb-3 input-group-sm">	<!-- input과 도움말을 묶는 클래스, input-group-sm/lg 도움말 사이즈 -->
+			<div class="input-group-prepend">	<!-- 도움말 위치 표시 클래스 -->
+				<span class="input-group-text">제목</span> <!-- 도움말 내용 표시 클래스 -->
+			</div>
+			<input type="text" class="form-control" placeholder="Title" id="tit" name="bTitle"/>
+		</div>
+		<div class="input-group mb-3 input-group-sm">	<!-- input과 도움말을 묶는 클래스, input-group-sm/lg 도움말 사이즈 -->
+			<div class="input-group-prepend">	<!-- 도움말 위치 표시 클래스 -->
+				<span class="input-group-text">내용</span> <!-- 도움말 내용 표시 클래스 -->
+			</div>
+			<textarea class="form-control" placeholder="Content" row="10" cols="30" name="bContent" style="height : 350px;"></textarea>
+		</div>
+		<a href="list.do">
+			<button type="button" class="btn btn-success" style="float: right;">
+				목록보기
+			</button>
+		</a>
+		<button type="submit" class="btn btn-primary" style="float: right;">
+			입력
+		</button>
+	</form>
 </div>
 </body>
 </html>
