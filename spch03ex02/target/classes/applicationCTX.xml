@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- IOC컨테이너에서 객체 만들기 -->
+		
+	<bean id="calculator" class="com.kjh.ch03ex02.Calculator"></bean>
+	<!-- id="사용할 객체이름(bean이름)", class="해당 클래스로 패키지까지 포함" -->
+	<bean id="myCalculator" class="com.kjh.ch03ex02.MyCalculator">
+		<!-- bean안에 속성(멤버변수와 값을 설정) -->
+		<property name="calculator">
+			<ref bean="calculator"></ref>	<!-- 배열과 리스트, String을 제외한 객체값 설정은 ref를 쓴다 -->
+		</property>
+		<property name="firstNum" value="10"></property>	<!-- 기본형과 String형 일시 멤버변수 설정  -->
+		<property name="secondNum" value="2"></property>
+	</bean>	
+</beans>
