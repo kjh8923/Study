@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="student1" class="com.kjh.ch06ex01.Student">
+		<!-- 생성자 파라메타 name, age, hobbys순으로 만든다 -->
+		<constructor-arg value="홍길동"></constructor-arg>
+		<constructor-arg value="25"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>수영</value>
+				<value>요리</value>
+			</list>
+		</constructor-arg>
+		<property name="height">
+			<value>187</value>
+		</property>
+		<property name="weight" value="84"></property>
+	</bean>
+	<bean id="studentInfo1" class="com.kjh.ch06ex01.StudentInfo">
+		<property name="student">	<!-- student가 객체형이므로 ref bean 사용 -->
+			<ref bean="student1"></ref>	<!-- 위에서 정의한 bean 객체 student1을 사용 -->
+		</property>
+	</bean>
+</beans>

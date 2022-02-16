@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- xmlns:c는 생성자 이용 네임스페이스, xmlns:p는 프로퍼티 이용 네임스페이스 -->
+	<!-- 일반적인 생성자나 프로퍼티를 이용한 방식 -->
+	<bean id="student3" class="com.kjh.ch06ex01.Student">
+		<constructor-arg value="고길동"></constructor-arg>
+		<constructor-arg value="35"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>줄넘기</value>
+				<value>공기놀이</value>
+			</list>
+		</constructor-arg>
+		<property name="height">
+			<value>165</value>
+		</property>
+		<property name="weight" value="65"></property>
+	</bean>
+	<!-- 시작태그 안에서 c:로 직접 생성자의 멤버변수와 p:로 set메서드의 멤버변수를 바로 처리 -->
+	<bean id="family" class="com.kjh.ch06ex01.Family" c:papaName="홍아빠" c:mamiName="홍엄마" p:sisterName="홍누나">
+		<property name="brotherName" value="홍오빠"></property>
+	</bean>
+</beans>

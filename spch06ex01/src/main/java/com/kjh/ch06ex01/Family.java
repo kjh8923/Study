@@ -1,0 +1,52 @@
+package com.kjh.ch06ex01;
+
+//bean으로 활용되는 클래스
+public class Family {
+	String papaName;
+	String mamiName;
+	String sisterName;
+	String brotherName;
+	
+	public Family() {
+		super();
+	}
+	
+	//파라메타 두개인 생성자
+	public Family(String papaName, String mamiName) {
+		super();
+		this.papaName = papaName;
+		this.mamiName = mamiName;
+	}
+
+	public String getPapaName() {
+		return papaName;
+	}
+
+	public void setPapaName(String papaName) {
+		this.papaName = papaName;
+	}
+
+	public String getMamiName() {
+		return mamiName;
+	}
+
+	public void setMamiName(String mamiName) {
+		this.mamiName = mamiName;
+	}
+
+	public String getSisterName() {
+		return sisterName;
+	}
+
+	public void setSisterName(String sisterName) {
+		this.sisterName = sisterName;
+	}
+
+	public String getBrotherName() {
+		return brotherName;
+	}
+
+	public void setBrotherName(String brotherName) {
+		this.brotherName = brotherName;
+	}
+}

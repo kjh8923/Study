@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+	<bean id="bmiCalculator" class="com.kjh.ch04ex01.BMICalculator">
+		<property name="lowWeight">	<!-- 기본형 변수값 설정 -->
+			<value>18.5</value>
+		</property>
+		<property name="normal">
+			<value>23</value>
+		</property>
+		<property name="overWeight">
+			<value>25</value>
+		</property>
+		<property name="obesity" value="30"></property> <!-- value속성 시작태그 안에 넣는 방법 -->
+	</bean>
+	<bean id="myInfo" class="com.kjh.ch04ex01.MyInfo">
+		<property name="name">	<!-- String은 기본형으로 처리 -->
+			<value>홍길동</value>
+		</property>
+		<property name="height">
+			<value>174</value>
+		</property>
+		<property name="weight">
+			<value>61</value>
+		</property>
+		<property name="hobbys">	<!-- hobbys멤버변수는 list이므로 list태그 안에 넣어줌 -->
+			<list>
+				<value>수영</value>
+				<value>요리</value>
+				<value>독서</value>
+			</list>
+		</property>
+		<property name="bmiCalculator">	<!-- list계열이 아닌 일반 객체형은 ref 태그를 사용 -->
+			<ref bean="bmiCalculator"></ref>
+		</property>
+	</bean>
+</beans>
