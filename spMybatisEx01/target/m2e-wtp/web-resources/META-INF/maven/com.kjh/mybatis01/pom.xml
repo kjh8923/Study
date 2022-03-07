@@ -3,13 +3,24 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.kjh</groupId>
-	<artifactId>map</artifactId>
-	<name>maptest</name>
+	<artifactId>mybatis01</artifactId>
+	<name>spMybatisEx01</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
 		<java-version>1.6</java-version>
+		
+<!-- ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ mybatis transation을 위해 수정 ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ -->		
+		
+		<!--  
 		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
+		-->
+		
+		<!-- mybatis transation을 위해 -->
+		<org.springframework-version>4.3.4.RELEASE</org.springframework-version>
+		
+<!-- ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ mybatis transation을 위해 수정 ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ -->
+		
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
@@ -90,44 +101,6 @@
 			<version>1</version>
 		</dependency>
 				
-<!-- ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ Servlet 수정 ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ -->
-				
-		<!-- 기존 Servlet -->
-		<!--
-		  
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>2.1</version>
-			<scope>provided</scope>
-		</dependency>
-		
-		-->
-		
-		<!-- servlet update -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>2.2</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
-		
 <!-- ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ Servlet 수정 ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ -->
 				
 		<!-- 기존 Servlet -->
@@ -316,3 +289,4 @@
         </plugins>
     </build>
 </project>
+

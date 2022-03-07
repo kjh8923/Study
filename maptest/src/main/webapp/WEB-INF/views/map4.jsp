@@ -57,6 +57,40 @@
 </style>
 </head>
 <body>
+
+<div class="container">
+	<h3>Map</h3>
+	<hr/>
+	<form action="write" method="POST">
+		<div class="input-group mb-3 input-group-sm">	<!-- input과 도움말을 묶는 클래스, input-group-sm/lg 도움말 사이즈 -->
+			<div class="input-group-prepend">	<!-- 도움말 위치 표시 클래스 -->
+				<span class="input-group-text">제목</span> <!-- 도움말 내용 표시 클래스 -->
+			</div>
+			<input type="text" class="form-control" placeholder="title" id="title" name="title"/>
+		</div>
+		<div class="input-group mb-3 input-group-sm">	<!-- input과 도움말을 묶는 클래스, input-group-sm/lg 도움말 사이즈 -->
+			<div class="input-group-prepend">	<!-- 도움말 위치 표시 클래스 -->
+				<span class="input-group-text">내용</span> <!-- 도움말 내용 표시 클래스 -->
+			</div>
+			<textarea class="form-control" placeholder="content" rows="10" cols="30" name="content" style="height : 350px;"></textarea>
+		</div>
+		<input type="hidden" id="placeName" name="placeName" value="">
+		<input type="hidden" id="latitude" name="latitude" value="">
+		<input type="hidden" id="longitude" name="longitude" value="">
+		<div id="clickLatlng"></div>
+		<a href="list">
+			<button type="button" class="btn btn-success" style="float: right;">
+				목록보기
+			</button>
+			<button type="submit" class="btn btn-primary" style="float: right;">
+				입력
+			</button>
+		</a>
+	</form>
+</div>
+
+<div id="clickLatlng"></div>
+
 <div class="map_wrap">
     <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
 
@@ -75,10 +109,8 @@
     </div>
 </div>
 
-<div id="clickLatlng"></div>
-
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=92b6b7355eb56122be94594a5e40e5fd&libraries=services"></script>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=92b6b7355eb56122be94594a5e40e5fd&libraries=clusterer"></script>
+<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=92b6b7355eb56122be94594a5e40e5fd&libraries=clusterer"></script> -->
 <script>
 // 마커를 담을 배열입니다
 var markers = [];
@@ -314,12 +346,18 @@ kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
     // 마커 위치를 클릭한 위치로 옮깁니다
     marker.setPosition(latlng);
     
+    return function() {
+        // 좌표정보를 파싱하기 위해 hidden input에 값 지정
+        $("#latitude").val(mouseEvent.La);
+        $("#longitude").val(mouseEvent.Ma);
+        $("#placeName").val(title);
+    
     var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
     message += '경도는 ' + latlng.getLng() + ' 입니다';
     
     var resultDiv = document.getElementById('clickLatlng'); 
     resultDiv.innerHTML = message;
-    
+    }
 });
 </script>
 </body>

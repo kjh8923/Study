@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mapper문서형식 지정 -->
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- root element는 mapper -->
+<!-- 속성 namespace는 인터페이스의 경로 및 인터페이스명 -->
+<mapper namespace = "com.kjh.mybatis01.dao.IDao">
+	<!-- sql insert문을 처리하는 태그는 insert, id는 매핑되는 메서드명 parameterType은 자바 dao에서 전달하는 값 -->
+	<insert id="writeDao" parameterType="com.kjh.mybatis01.dto.ContentDto">
+		<!-- insert sql문 작성 -->
+		INSERT INTO BATIS(MID, MWRITER, MCONTENT)
+		VALUES(BATIS_SEQ.NEXTVAL, #{mWriter}, #{mContent})
+		<!-- #{데이터클래스의 멤버변수명} -->
+	</insert>
+	
+	<select id="listDao" resultType="com.kjh.mybatis01.dto.ContentDto">
+		<!-- resultType 속성값은 구성원소 객체를 나타내는 클래스 -->
+		SELECT * FROM BATIS ORDER BY MID DESC
+	</select>
+	
+	<delete id="deleteDao" parameterType="int">
+		DELETE FROM BATIS WHERE MID = #{mId}
+	</delete>
+	
+	<select id="viewDao" parameterType="int" resultType="com.kjh.mybatis01.dto.ContentDto">
+		SELECT * FROM BATIS WHERE MID = #{mId}
+	</select>
+	
+	<insert id="writeCard" parameterType="com.kjh.mybatis01.dto.TicketDto">
+		INSERT INTO CARD(CONSUMERID, AMOUNT)
+		VALUES(#{consumerId}, #{amount})
+	</insert>
+	
+	<insert id="writeTicket" parameterType="com.kjh.mybatis01.dto.TicketDto">
+		INSERT INTO TICKET(CONSUMERID, COUNTNUM)
+		VALUES(#{consumerId}, #{amount})
+	</insert>
+</mapper>
+
+<!-- mapper엘리먼트 안에는 각 sql의 DML인 select, insert, delete, update등의 엘리먼트가 옴 -->
+<!-- parameterType인 dto객체일시는 객체.속성 대신 속성 만으로 사용 가능 -->
+<!-- parameterType이 기본형일시 #{파라메타이름}에서 파라메타이름에 상관없이 호출시 넘겨받은 값을 나타냄 -->
+<!-- cache - 해당 네임스페이스를 위한 캐시 설정  -->
+<!-- cache-ref - 다른 네임스페이스의 캐시 설정에 대한 참조 -->
+<!-- resultMap - 데이터베이스 결과데이터를 객체에 로드하는 방법을 정의하는 엘리먼트 -->
+<!-- id는 interface의 메서드 이름, parameterType은 sqlSession메서드에서 넘겨주는 메서드의 파라메타 변수형 -->
+<!-- resultType은 메서드의 리턴 타입을 적어줌(객체형은 패키지 까지 포함)
+	 #{파라메타명}으로 preparedStatement의 ?에 사용되는 값 -->
+	
+	
+
+
+
