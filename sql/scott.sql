@@ -34,3 +34,36 @@ amount number(4)
 );
 
 commit;
+
+create table batis(
+    mid number(4) primary key,
+    mwriter varchar2(100),
+    mcontent varchar2(100)
+);
+
+commit;
+
+create SEQUENCE batis_seq nocache;
+
+commit;
+
+create table maptest(
+    mid number(4) primary key,
+    title varchar2(20),
+    content varchar2(100),
+    latitude varchar2(20),
+    longitude varchar2(20),
+    placeName varchar2(20)
+);
+
+create SEQUENCE maptest_seq nocache;
+
+commit;
+
+alter table maptest add placeName2 varchar2(20);
+
+commit;
+
+alter table maptest modify(placeName varchar2(50));
+alter table maptest modify(placeName2 varchar2(50));
+alter table maptest modify(title varchar2(50));
