@@ -47,7 +47,7 @@ public class HomeController {
 	
 	@RequestMapping("/write")
 	public String write(HttpServletRequest request, Model model) {
-		dao.writeDao(request.getParameter("title"), request.getParameter("content"), request.getParameter("latitude"), request.getParameter("longitude"), request.getParameter("placeName"));
+		dao.writeDao(request.getParameter("title"), request.getParameter("content"), request.getParameter("latitude"), request.getParameter("longitude"), request.getParameter("placeName"), request.getParameter("placeName2"));
 		return "home";
 	}
 	

@@ -7,13 +7,15 @@ public class ContentDto {
 	private String latitude;
 	private String longitude;
 	private String placeName;
+	private String placeName2;
 	
 	public ContentDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ContentDto(int mId, String title, String content, String latitude, String longitude, String placeName) {
+	public ContentDto(int mId, String title, String content, String latitude, String longitude, String placeName,
+			String placeName2) {
 		super();
 		this.mId = mId;
 		this.title = title;
@@ -21,6 +23,7 @@ public class ContentDto {
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.placeName = placeName;
+		this.placeName2 = placeName2;
 	}
 
 	public int getmId() {
@@ -70,4 +73,14 @@ public class ContentDto {
 	public void setPlaceName(String placeName) {
 		this.placeName = placeName;
 	}
+
+	public String getPlaceName2() {
+		return placeName2;
+	}
+
+	public void setPlaceName2(String placeName2) {
+		this.placeName2 = placeName2;
+	}
+	
+	
 }

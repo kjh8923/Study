@@ -5,8 +5,8 @@
 
 <mapper namespace = "com.kjh.map.dao.IDao">
 	<insert id="writeDao" parameterType="com.kjh.map.dto.ContentDto">
-		INSERT INTO MAPTEST(MID, TITLE, CONTENT, LATITUDE, LONGITUDE, PLACENAME)
-		values(maptest_seq.nextval, #{title}, #{content}, #{latitude}, #{longitude}, #{placeName})
+		INSERT INTO MAPTEST(MID, TITLE, CONTENT, LATITUDE, LONGITUDE, PLACENAME, PLACENAME2)
+		values(maptest_seq.nextval, #{title}, #{content}, #{latitude}, #{longitude}, #{placeName}, #{placeName2})
 	</insert>
 </mapper>	
 

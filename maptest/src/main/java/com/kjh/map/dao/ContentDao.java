@@ -15,8 +15,8 @@ public class ContentDao implements IDao {
 	}
 	
 	@Override
-	public void writeDao(String title, String content, String latitude, String longitude, String placeName) {
-		ContentDto dto = new ContentDto(0, title, content, latitude, longitude, placeName);
+	public void writeDao(String title, String content, String latitude, String longitude, String placeName, String placeName2) {
+		ContentDto dto = new ContentDto(0, title, content, latitude, longitude, placeName, placeName2);
 		sqlSession.insert("writeDao", dto);
 
 	}
